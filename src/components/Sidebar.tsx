@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { ChevronDown, Plus, Filter, Sort } from 'lucide-react';
+import { ChevronDown, Plus, Filter } from 'lucide-react';
 
 const Sidebar = () => {
   return (

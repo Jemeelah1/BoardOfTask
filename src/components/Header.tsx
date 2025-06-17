@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Filter, Sort } from 'lucide-react';
+import { Filter, ArrowUpDown } from 'lucide-react';
 
 const Header = () => {
   return (
@@ -39,7 +39,7 @@ const Header = () => {
             <span>Filter</span>
           </button>
           <button className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors">
-            <Sort className="w-4 h-4" />
+            <ArrowUpDown className="w-4 h-4" />
             <span>Sort</span>
           </button>
           <button className="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-800 transition-colors">
