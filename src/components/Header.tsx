@@ -4,16 +4,16 @@ import { Filter, ArrowUpDown } from 'lucide-react';
 
 const Header = () => {
   return (
-    <div className="bg-white border-b border-gray-200 px-8 py-4">
+    <div className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-8 py-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-6">
-          <h1 className="text-2xl font-semibold text-gray-900">
+          <h1 className="text-2xl font-semibold text-gray-900 dark:text-white">
             Welcome back, Vincent 👋
           </h1>
         </div>
         
         <div className="flex items-center space-x-4">
-          <div className="flex items-center space-x-2 text-sm text-gray-500">
+          <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
             <span>19 May 2022</span>
           </div>
           
@@ -26,23 +26,23 @@ const Header = () => {
       <div className="mt-6 flex items-center justify-between">
         <div className="flex items-center space-x-6">
           <div className="flex items-center space-x-2">
-            <span className="text-sm font-medium text-gray-900">Board view</span>
+            <span className="text-sm font-medium text-gray-900 dark:text-white">Board view</span>
           </div>
-          <button className="text-sm text-gray-500 hover:text-gray-700 transition-colors">
+          <button className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
             Add view
           </button>
         </div>
         
         <div className="flex items-center space-x-4">
-          <button className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors">
+          <button className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors">
             <Filter className="w-4 h-4" />
             <span>Filter</span>
           </button>
-          <button className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-600 hover:text-gray-900 transition-colors">
+          <button className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors">
             <ArrowUpDown className="w-4 h-4" />
             <span>Sort</span>
           </button>
-          <button className="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-800 transition-colors">
+          <button className="bg-gray-900 dark:bg-gray-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors">
             New template
           </button>
         </div>
