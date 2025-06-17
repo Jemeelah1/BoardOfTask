@@ -4,7 +4,6 @@ import { DragDropContext, DropResult } from 'react-beautiful-dnd';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
 import KanbanColumn from '../components/KanbanColumn';
-import { ThemeProvider } from '../contexts/ThemeContext';
 import { useToast } from '../hooks/use-toast';
 
 interface Task {
@@ -205,43 +204,41 @@ const Index = () => {
   };
 
   return (
-    <ThemeProvider>
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex">
-        <Sidebar />
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex">
+      <Sidebar />
+      
+      <div className="flex-1 flex flex-col">
+        <Header />
         
-        <div className="flex-1 flex flex-col">
-          <Header />
-          
-          <div className="flex-1 p-8">
-            <DragDropContext onDragEnd={onDragEnd}>
-              <div className="flex space-x-6 overflow-x-auto">
-                <KanbanColumn
-                  title="To do"
-                  count={tasks.todo.length}
-                  tasks={tasks.todo}
-                  addNewTask={addNewTask}
-                  columnId="todo"
-                />
-                <KanbanColumn
-                  title="In progress"
-                  count={tasks.inProgress.length}
-                  tasks={tasks.inProgress}
-                  addNewTask={addNewTask}
-                  columnId="inProgress"
-                />
-                <KanbanColumn
-                  title="Done"
-                  count={tasks.done.length}
-                  tasks={tasks.done}
-                  addNewTask={addNewTask}
-                  columnId="done"
-                />
-              </div>
-            </DragDropContext>
-          </div>
+        <div className="flex-1 p-8">
+          <DragDropContext onDragEnd={onDragEnd}>
+            <div className="flex space-x-6 overflow-x-auto">
+              <KanbanColumn
+                title="To do"
+                count={tasks.todo.length}
+                tasks={tasks.todo}
+                addNewTask={addNewTask}
+                columnId="todo"
+              />
+              <KanbanColumn
+                title="In progress"
+                count={tasks.inProgress.length}
+                tasks={tasks.inProgress}
+                addNewTask={addNewTask}
+                columnId="inProgress"
+              />
+              <KanbanColumn
+                title="Done"
+                count={tasks.done.length}
+                tasks={tasks.done}
+                addNewTask={addNewTask}
+                columnId="done"
+              />
+            </div>
+          </DragDropContext>
         </div>
       </div>
-    </ThemeProvider>
+    </div>
   );
 };
 
