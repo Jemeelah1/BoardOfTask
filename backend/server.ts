@@ -8,13 +8,13 @@ const prisma = new PrismaClient();
 app.use(cors());
 app.use(express.json());
 
-// 🟢 Get all tasks
+// Get all tasks
 app.get("/tasks", async (req, res) => {
   const tasks = await prisma.task.findMany();
   res.json(tasks);
 });
 
-// 🟢 Create new task
+// Create new task
 app.post("/tasks", async (req, res) => {
   const { title, subtitle, progress, maxProgress, date } = req.body;
 
